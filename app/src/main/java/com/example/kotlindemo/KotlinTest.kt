@@ -11,7 +11,7 @@ import kotlinx.android.synthetic.main.activity_kotlin.*
  * Time: 09:39
  */
 class KotlinTest: AppCompatActivity() {
-
+//
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_kotlin);
