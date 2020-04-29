@@ -9,6 +9,7 @@ import kotlinx.android.synthetic.main.activity_kotlin.*
  * User: lifanchao
  * Date: 2020/4/29
  * Time: 09:39
+ *  接收activity
  */
 class KotlinTest: AppCompatActivity() {
 
