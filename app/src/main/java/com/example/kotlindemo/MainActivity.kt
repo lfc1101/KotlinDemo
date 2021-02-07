@@ -10,7 +10,6 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity() {
 
     val TAG = "MainActivity"
-    var count = 42
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         Log.e(TAG, "initQJ: ===>$intRange ,$charRange ,$longRange")
         Log.e(TAG, "initQJ: ===>${intRange.joinToString()}" )
 
-        val intRangeExclusive = 1 until 10 //开区间 半开半闭式 前开后闭
+        val intRangeExclusive = 1 until 10 //开区间 半开半闭式 前闭后开
         val charRangeExclusive = 'a' until 'z'
         val longRangeExclusive = 1L until  100L
         Log.e(TAG, "initQJ: ===>$intRangeExclusive,$charRangeExclusive,$longRangeExclusive")
@@ -48,6 +47,15 @@ class MainActivity : AppCompatActivity() {
         val charRangeWithStep = 'z' downTo 'a' step 4
         val longRangeWithStep = 1L .. 10L step 1
         Log.e(TAG, "initQJ: ===>${charRangeWithStep.joinToString()}" )
+
+        //区间的应用
+        val array = intArrayOf(1,3,5,7)
+        for ( i in 0 until array.size){ // 第一种遍历方式
+            Log.e(TAG, "initQJ: ===>${array[i]}" )
+        }
+        for (i in array.indices){ // 第二种遍历方式  indices ： 返回 [0，array.size)
+            Log.e(TAG, "initQJ: ===>${array[i]}" )
+        }
 
     }
 
@@ -103,6 +111,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initTest() {
+
+        var count = 42
 
         //toUpperCase() 是一个只能对 String 类型的变量调用的函数
         val langName = "Kotlin"
