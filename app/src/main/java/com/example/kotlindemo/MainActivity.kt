@@ -55,6 +55,7 @@ class MainActivity : AppCompatActivity() {
         }
         for (i in array.indices){ // 第二种遍历方式  indices ： 返回 [0，array.size)
             Log.e(TAG, "initQJ: ===>${array[i]}" )
+            println(array[i])
         }
 
     }
